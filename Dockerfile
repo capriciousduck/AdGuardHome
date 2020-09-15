@@ -75,4 +75,4 @@ WORKDIR /opt/adguardhome/work
 VOLUME ["/opt/adguardhome/conf", "/opt/adguardhome/work"]
 
 ENTRYPOINT ["/opt/adguardhome/AdGuardHome"]
-CMD ["-h", "0.0.0.0", "-c", "/opt/adguardhome/conf/AdGuardHome.yaml", "-w", "/opt/adguardhome/work", "--no-check-update"]
+CMD ["-h", "0.0.0.0","-p", "$PORT", "-c", "/opt/adguardhome/conf/AdGuardHome.yaml", "-w", "/opt/adguardhome/work", "--no-check-update"]
